@@ -71,7 +71,7 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $category->name = $request->name;
         $category->description = $request->description;
-
+        $category->save();
         //save image
         if ($request->hasFile('image')) {
             $image = $request->file('image');
