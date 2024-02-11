@@ -13,7 +13,7 @@
             <div class="section-header">
                 <h1>Product</h1>
                 <div class="section-header-button">
-                    <a href="{{ route('products.create') }}" class="btn btn-primary">Add New</a>
+                    <a href="{{ route('products.create') }}" class="btn btn-primary">Tambah Baru</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -75,7 +75,11 @@
                                                 <td>
                                                     {{ $product->status == 1 ? 'Active' : 'Inactive' }}
                                                 </td>
-                                                <td><img src={{ $product->image }} width="55" height="55" alt="tes" /></td>
+                                                <td>
+                                                    <div>
+                                                        <img src={{ $product->image }} width="60" height="55" alt="tes"  style="border-radius: 8px"/>
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <a href='{{ route('products.edit', $product->id) }}'
